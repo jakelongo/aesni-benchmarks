@@ -7,7 +7,7 @@
 #include <intrin.h>
 #define _ALIGN_ALLOC_(_ptr, _bnd, _size) _ptr = (uint8_t*) _aligned_malloc(_size, _bnd)
 #define _ALIGN_FREE_(_ptr) _aligned_free(_ptr)
-#define _GETHOSTNAME(_buff, _buffLen) GetComputerName(_buff, (LPDWORD) &(_buffLen))
+#define _GETHOSTNAME(_buff, _buffLen) GetComputerName((LPWSTR) _buff, (LPDWORD) &(_buffLen))
 #else /* (__linux) || defined (__APPLE__) */
 #include <unistd.h>
 #define _ALIGN_ALLOC_(_ptr, _bnd, _size) posix_memalign((void**)&_ptr, _bnd, _size)
@@ -43,7 +43,7 @@
 #define GIGABYTES           MEGABYTES*1024
 
 #define NUMBER_OF_KEYS      32*MEGABYTES
-#define NUMBER_OF_REPEATS   10000
+#define NUMBER_OF_REPEATS   1
 
 
 // Get cycle counter from rdtsc register
