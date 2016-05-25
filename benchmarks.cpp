@@ -42,8 +42,8 @@
 #define MEGABYTES           KILOBYTES*1024
 #define GIGABYTES           MEGABYTES*1024
 
-#define NUMBER_OF_KEYS      32*MEGABYTES
-#define NUMBER_OF_REPEATS   1
+#define NUMBER_OF_KEYS      32*KILOBYTES
+#define NUMBER_OF_REPEATS   10000
 
 
 // Get cycle counter from rdtsc register
