@@ -67,4 +67,4 @@ present.
 - The assembly implementation is omitted when compiling on a Windows
 platform as I suspect it's not compatible with MASM.
 - There are plenty of improvements to be made but this framework has
- served it's and I didn't need it to be perfect.
+ served it's purpose and is not intended to be perfect.
